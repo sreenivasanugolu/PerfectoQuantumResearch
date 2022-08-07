@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ADA Suite" parallel="tests" preserve-order="true" thread-count="10">
+    <!--  	<parameter name="user" value=PERFECTO_USERNAME"></parameter>
+        <parameter name="password" value="PERFECTO_PASSWORD"></parameter>
+   TODO - Either generate a new Security TOKEN or Modify to use Username / Password
+        *** Or use a generated security token
+        -->
+    <parameter name="securityToken" value="eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2ZDM2NmJiNS01NDAyLTQ4MmMtYTVhOC1kODZhODk4MDYyZjIifQ.eyJpYXQiOjE2NTg5NDY1MjAsImp0aSI6ImZmOTk0YzFhLTdlMzktNGI5NS04ZjI1LWJkMWZkNzk2NDUyYiIsImlzcyI6Imh0dHBzOi8vYXV0aDMucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL3RyaWFsLXBlcmZlY3RvbW9iaWxlLWNvbSIsImF1ZCI6Imh0dHBzOi8vYXV0aDMucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL3RyaWFsLXBlcmZlY3RvbW9iaWxlLWNvbSIsInN1YiI6IjViNjI4YzliLTA0ODMtNDI3OS1iYzM3LTc0YTA0MmRiZTIzNiIsInR5cCI6Ik9mZmxpbmUiLCJhenAiOiJvZmZsaW5lLXRva2VuLWdlbmVyYXRvciIsIm5vbmNlIjoiYTE2NzRkNDUtM2YzZC00NDJiLTg0N2MtODdmZGM5ZDhmZGNkIiwic2Vzc2lvbl9zdGF0ZSI6IjdiZWFkNDRjLTE5ZjEtNGMyZi04MWVkLTQ0YTkxMzBlMTk2ZiIsInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIHByb2ZpbGUgZW1haWwifQ.vBZ3v2suu-O5ZRu1zF7zZsxqH-YjrySs-y7dXRzrzD8"></parameter>
+    <parameter name="host" value="trial.perfectomobile.com"></parameter>
+    <parameter name="waitForAvailableLicense" value="true"></parameter>
+    <test name="Mayo home page">
+        <parameter name="url" value="https://mayoclinic.org/"></parameter>
+        <classes>
+            <class name="com.quantum.accessibility.WebADA_Axe"/>
+        </classes>
+    </test>
+
+    <test name="Mayo - Appointments page">
+        <parameter name="url" value="https://www.mayoclinic.org/appointments"></parameter>
+        <classes>
+            <class name="com.quantum.accessibility.WebADA_Axe"/>
+        </classes>
+    </test>
+
+</suite>
+
